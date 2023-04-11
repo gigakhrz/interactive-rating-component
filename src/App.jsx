@@ -1,19 +1,29 @@
 import { useState } from "react";
 import styled from "styled-components";
-import "./App.css";
-import Container from "./components/Conatainer";
+import Firstcard from "./components/Firstcard";
+import SecondCard from "./components/Secondcard";
 
 function App() {
+  const [showrating, setshowrating] = useState(false);
+  const [index, setindex] = useState("");
   return (
-    <Background>
-      <Container />
-    </Background>
+    <MainContainer>
+      {showrating ? (
+        <SecondCard index={index} />
+      ) : (
+        <Firstcard
+          setshowrating={setshowrating}
+          index={index}
+          setindex={setindex}
+        />
+      )}
+    </MainContainer>
   );
 }
 
 export default App;
 
-const Background = styled.main`
+const MainContainer = styled.main`
   background-color: #131518;
   width: 100%;
   height: 100vh;
