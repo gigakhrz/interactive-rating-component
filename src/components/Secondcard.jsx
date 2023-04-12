@@ -81,7 +81,7 @@ const Thank = styled.div`
     text-align: center;
   }
   @media screen and (min-width: 768px) {
-    gap:7px'
+    gap: 7px;
     h3 {
       font-size: 28px;
       line-height: 34.5px;
