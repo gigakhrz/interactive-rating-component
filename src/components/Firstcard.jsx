@@ -64,8 +64,7 @@ function Firstcard({ index, setindex, setshowrating }) {
 export default Firstcard;
 
 const ParentDiv = styled.div`
-  max-width: 412px;
-  height: 360px;
+  width: 327px;
   background: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%),
     linear-gradient(0deg, #979797, #979797);
   border-radius: 15px;
@@ -73,6 +72,10 @@ const ParentDiv = styled.div`
   gap: 16px;
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: 768px) {
+    width: 412px;
+    padding: 32px 35px;
+  }
 `;
 
 const Star = styled.div`
@@ -110,6 +113,17 @@ const TextContainer = styled.div`
     text-align: left;
     color: #969fad;
   }
+
+  @media screen and (min-width: 768px) {
+    .title {
+      font-size: 28px;
+      line-height: 34.5px;
+    }
+    .description {
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
 `;
 // div where number buttons are
 const NumbDiv = styled.div`
@@ -146,6 +160,11 @@ const Numb = styled.button`
     line-height: 24px;
     letter-spacing: 0.2px;
   }
+
+  @media screen and (min-width: 768px) {
+    width: 51px;
+    height: 51px;
+  }
 `;
 
 const Button = styled.button`
@@ -165,4 +184,16 @@ const Button = styled.button`
   line-height: 18px;
   letter-spacing: 1.87px;
   color: white;
+
+  :hover {
+    background-color: white;
+    color: #fc7614;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 51px;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 2px;
+  }
 `;
